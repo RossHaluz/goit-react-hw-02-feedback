@@ -1,4 +1,5 @@
 import Notification from '../Notification/Notification';
+import PropTypes from 'prop-types';
 
 const Statistics = ({
   good,
@@ -23,6 +24,14 @@ const Statistics = ({
       )}
     </div>
   );
+};
+
+Statistics.propType = {
+  good: PropTypes.number,
+  neutral: PropTypes.number,
+  bad: PropTypes.number,
+  total: PropTypes.number,
+  positivePercentage: PropTypes.number,
 };
 
 export default Statistics;

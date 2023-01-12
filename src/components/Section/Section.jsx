@@ -1,4 +1,5 @@
 import { Container, SectionTitle } from './Section.styled';
+import PropTypes from 'prop-types';
 
 const Section = ({ title, children }) => {
   return (
@@ -7,6 +8,10 @@ const Section = ({ title, children }) => {
       {children}
     </Container>
   );
+};
+
+Section.propTypes = {
+  title: PropTypes.string,
 };
 
 export default Section;
