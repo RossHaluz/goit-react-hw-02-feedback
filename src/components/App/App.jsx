@@ -14,6 +14,13 @@ export class App extends Component {
     this.setState(prevState => ({ [feedback]: prevState[feedback] + 1 }));
   };
 
+  countTotalFeedback = () => {
+    const count = Object.values(this.state);
+    const result = count.reduce((acc, total) => acc + total, 0);
+
+    return result;
+  };
+
   render() {
     const { good, neutral, bad } = this.state;
     const optionsState = Object.keys(this.state);
@@ -29,7 +36,7 @@ export class App extends Component {
           good={good}
           neutral={neutral}
           bad={bad}
-          total={this.countTotalFeedback}
+          total={this.countTotalFeedback()}
         />
       </Section>
     );
