@@ -24,7 +24,13 @@ export class App extends Component {
           options={optionsState}
           onLeaveFeedback={this.onLeaveFeedback}
         />
-        <Statistics good={good} neutral={neutral} bad={bad} />
+
+        <Statistics
+          good={good}
+          neutral={neutral}
+          bad={bad}
+          total={this.countTotalFeedback}
+        />
       </Section>
     );
   }
