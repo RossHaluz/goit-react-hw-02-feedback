@@ -1,9 +1,9 @@
-import FeedbackOptions from 'components/FeedbackOptions/FeedbackOptions';
-import Section from 'components/Section/Section';
-import Statistics from 'components/Statistics/Statistics';
+import FeedbackOptions from 'components/FeedbackOptions';
+import Section from 'components/Section';
+import Statistics from 'components/Statistics';
 import React, { Component } from 'react';
 
-export class App extends Component {
+class App extends Component {
   state = {
     good: 0,
     neutral: 0,
@@ -47,3 +47,5 @@ export class App extends Component {
     );
   }
 }
+
+export default App;
