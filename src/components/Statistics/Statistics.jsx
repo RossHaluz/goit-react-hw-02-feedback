@@ -1,6 +1,12 @@
 import Notification from '../Notification/Notification';
 
-const Statistics = ({ good, neutral, bad, total = 0 }) => {
+const Statistics = ({
+  good,
+  neutral,
+  bad,
+  total = 0,
+  positivePercentage = 0,
+}) => {
   return (
     <div>
       <h2>Statistics</h2>
@@ -8,10 +14,11 @@ const Statistics = ({ good, neutral, bad, total = 0 }) => {
         <Notification message="There is no feedback" />
       ) : (
         <>
-          <p>Good {good}</p>
+          <p>Good: {good}</p>
           <p>Neutral: {neutral}</p>
           <p>Bad: {bad}</p>
           <p>Total: {total}</p>
+          <p>Positive feedback: {positivePercentage}%</p>
         </>
       )}
     </div>

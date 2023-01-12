@@ -10,4 +10,5 @@ export const OptionBtn = styled.button`
   font-size: 18px;
   text-transform: capitalize;
   font-weight: 600;
+  color: #030303;
 `;
